@@ -1,0 +1,20 @@
+<?php
+$a='abcde';    
+$b='cdabe';   
+$str='';
+for($l=0;$l<strlen($a);$l++){
+	$k=$l;
+	$n=0;
+	$d[]=$str;
+	$str='';
+	for($i=&$k;$i<strlen($a);$k++){	
+		for($j=$n;$j<strlen($b);$j++){	
+			if($k<strlen($a) && $a[$k]==$b[$j]){
+				$str.=$a[$k];
+				$k++;
+				$n=$j+1;
+			}
+		}
+	}	
+}	
+print_r($d);
